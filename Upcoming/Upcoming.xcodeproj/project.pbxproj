@@ -54,14 +54,70 @@
 		BEBAD17020C5D8FA0032B5A8 /* Upcoming */ = {
 			isa = PBXGroup;
 			children = (
-				BEBAD17120C5D8FA0032B5A8 /* AppDelegate.swift */,
-				BEBAD17320C5D8FA0032B5A8 /* ViewController.swift */,
-				BEBAD17520C5D8FA0032B5A8 /* Main.storyboard */,
-				BEBAD17820C5D8FB0032B5A8 /* Assets.xcassets */,
-				BEBAD17A20C5D8FB0032B5A8 /* LaunchScreen.storyboard */,
-				BEBAD17D20C5D8FB0032B5A8 /* Info.plist */,
+				BEBAD18920C610060032B5A8 /* AppDelegate */,
+				BEBAD18820C60FF90032B5A8 /* Networkings */,
+				BEBAD18720C60FC90032B5A8 /* Resources */,
+				BEBAD18620C60FBB0032B5A8 /* Support Files */,
+				BEBAD18520C60FB50032B5A8 /* Views */,
+				BEBAD18420C60FA80032B5A8 /* ViewControllers */,
+				BEBAD18320C60FA10032B5A8 /* Models */,
 			);
 			path = Upcoming;
+			sourceTree = "<group>";
+		};
+		BEBAD18320C60FA10032B5A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BEBAD18420C60FA80032B5A8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEBAD17320C5D8FA0032B5A8 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BEBAD18520C60FB50032B5A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEBAD17A20C5D8FB0032B5A8 /* LaunchScreen.storyboard */,
+				BEBAD17520C5D8FA0032B5A8 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BEBAD18620C60FBB0032B5A8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BEBAD17D20C5D8FB0032B5A8 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		BEBAD18720C60FC90032B5A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BEBAD17820C5D8FB0032B5A8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BEBAD18820C60FF90032B5A8 /* Networkings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networkings;
+			sourceTree = "<group>";
+		};
+		BEBAD18920C610060032B5A8 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				BEBAD17120C5D8FA0032B5A8 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +338,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6G7MA7JWVY;
-				INFOPLIST_FILE = Upcoming/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Upcoming/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,7 +347,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arctouch.Upcoming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -300,7 +357,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6G7MA7JWVY;
-				INFOPLIST_FILE = Upcoming/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Upcoming/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arctouch.Upcoming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
