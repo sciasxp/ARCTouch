@@ -11,6 +11,8 @@
 		BE8D5B5420C72F9100212FAB /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D5B5320C72F9100212FAB /* UITableViewCell+Extension.swift */; };
 		BE8D5B5620C7317600212FAB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D5B5520C7317600212FAB /* RootViewController.swift */; };
 		BE8D5B5820C737F000212FAB /* UIStoryboardSegue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D5B5720C737F000212FAB /* UIStoryboardSegue+Extension.swift */; };
+		BE8D5B5A20C73CAD00212FAB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D5B5920C73CAD00212FAB /* DetailViewController.swift */; };
+		BE8D5B5C20C74B4900212FAB /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D5B5B20C74B4900212FAB /* Array+Extension.swift */; };
 		BE8F8C0420C622AD00464572 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F8C0320C622AD00464572 /* APIClient.swift */; };
 		BE8F8C0620C622CF00464572 /* APIClient+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F8C0520C622CF00464572 /* APIClient+Extension.swift */; };
 		BE8F8C0820C6232400464572 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F8C0720C6232400464572 /* Endpoint.swift */; };
@@ -35,6 +37,8 @@
 		BE8D5B5320C72F9100212FAB /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		BE8D5B5520C7317600212FAB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		BE8D5B5720C737F000212FAB /* UIStoryboardSegue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboardSegue+Extension.swift"; sourceTree = "<group>"; };
+		BE8D5B5920C73CAD00212FAB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BE8D5B5B20C74B4900212FAB /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		BE8F8C0320C622AD00464572 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		BE8F8C0520C622CF00464572 /* APIClient+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Extension.swift"; sourceTree = "<group>"; };
 		BE8F8C0720C6232400464572 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 				BE8F8C2920C6E07000464572 /* UIViewController+Extensions.swift */,
 				BE8D5B5320C72F9100212FAB /* UITableViewCell+Extension.swift */,
 				BE8D5B5720C737F000212FAB /* UIStoryboardSegue+Extension.swift */,
+				BE8D5B5B20C74B4900212FAB /* Array+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				BE8F8C2020C6D1CE00464572 /* RootViewController */,
+				BE8D5B5920C73CAD00212FAB /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -289,6 +295,8 @@
 				BE8F8C2A20C6E07000464572 /* UIViewController+Extensions.swift in Sources */,
 				BE8D5B5220C72F6F00212FAB /* MovieTableViewCell.swift in Sources */,
 				BE8F8C0A20C6233D00464572 /* Endpoint+Extension.swift in Sources */,
+				BE8D5B5A20C73CAD00212FAB /* DetailViewController.swift in Sources */,
+				BE8D5B5C20C74B4900212FAB /* Array+Extension.swift in Sources */,
 				BE8F8C0E20C623F500464572 /* TMDbEndpoint.swift in Sources */,
 				BE8F8C2820C6D9BC00464572 /* UILabel+Extension.swift in Sources */,
 				BE8F8C1820C62A1800464572 /* UpcomingCodableList.swift in Sources */,

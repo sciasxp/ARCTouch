@@ -8,8 +8,16 @@
 
 import Foundation
 
-struct GenreCodable: Codable {
+struct GenreCodable: Codable, Equatable {
     
     let id: Int32
     let name: String
+}
+
+extension GenreCodable: Hashable {
+    
+    var hashValue: Int {
+        
+        return id.hashValue ^ name.hashValue
+    }
 }

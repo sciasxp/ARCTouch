@@ -10,6 +10,6 @@ import Foundation
 
 struct UpcomingCodableList: Codable {
     
-    let results: [UpcomingCodable]
+    let results: Set<UpcomingCodable>
     let totalPages: Int
 }

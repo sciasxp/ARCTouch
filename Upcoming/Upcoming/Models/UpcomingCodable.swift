@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct UpcomingCodable: Codable {
+struct UpcomingCodable: Codable, Equatable {
     
     let id: Int32
     let title: String
@@ -16,4 +16,15 @@ struct UpcomingCodable: Codable {
     let releaseDate: Date
     var posterPath: String?
     let genreIds: Set<Int32>?
+}
+
+extension UpcomingCodable: Hashable {
+    
+    var hashValue: Int {
+        
+        return id.hashValue ^
+            title.hashValue ^
+            overview.hashValue ^
+            releaseDate.hashValue
+    }
 }

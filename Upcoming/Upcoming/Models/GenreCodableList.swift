@@ -10,5 +10,5 @@ import Foundation
 
 struct GenreCodableList: Codable {
     
-    let genres: [GenreCodable]
+    let genres: Set<GenreCodable>
 }

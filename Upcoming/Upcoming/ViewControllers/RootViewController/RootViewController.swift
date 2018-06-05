@@ -12,10 +12,12 @@ class RootViewController: UIViewController {
 
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var greetingsLabel: UILabel!
+    @IBOutlet weak var loadingLabel: UILabel!
     private let searchController = UISearchController(searchResultsController: nil)
     
     // MARK: -
-    private var genres: [GenreCodable] = []
+    private var genres: Set<GenreCodable> = []
     private var movies: [UpcomingCodable] = []
     private var filteredMovies: [UpcomingCodable] = [] {
         didSet {
@@ -23,6 +25,10 @@ class RootViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
+    
+    // MARK: - Buffers
+    
+    private var moviesBuffer: Set<UpcomingCodable> = []
     
     // MARK: -
     private let networkClient = TMDbClient()
@@ -40,9 +46,11 @@ class RootViewController: UIViewController {
         // Setup the Search Controller
         SetupSearchController()
         
+        // Setup TableView
+        
+        
         // Load Data
         loadGenres()
-        
         loadMovies()
     }
 
@@ -63,7 +71,7 @@ class RootViewController: UIViewController {
             switch either {
                 
             case .success(let genreList):
-                self.genres.append(contentsOf: genreList.genres)
+                self.genres = self.genres.union(genreList.genres)
                 
             case .error(let error):
                 self.showAlert(with: UILabel.ErrorMessages.title, and: error.localizedDescription)
@@ -82,9 +90,9 @@ class RootViewController: UIViewController {
             switch either {
                 
             case .success(let resultList):
-                //self.movies.append(contentsOf: resultList.results)
+                self.moviesBuffer = self.moviesBuffer.union(resultList.results)
                 self.tableView.isHidden = true
-                self.movies = Array([self.movies, resultList.results].joined())
+                
                 self.page += 1
                 if self.page <= resultList.totalPages {
                     
@@ -92,6 +100,15 @@ class RootViewController: UIViewController {
                 
                 } else {
                     
+                    self.movies = Array(self.moviesBuffer)
+                    self.movies = self.movies.filter({ (movie) -> Bool in
+                        
+                        return movie.releaseDate > Date()
+                    })
+                    self.movies.sort(by: { (movie1, movie2) -> Bool in
+                        
+                        return movie1.releaseDate < movie2.releaseDate
+                    })
                     self.tableView.reloadData()
                     self.tableView.isHidden = false
                 }
@@ -152,8 +169,8 @@ class RootViewController: UIViewController {
                 movie = self.movies[indexPath.row]
             }
             
-            //let detail = segue.destination as! DetailViewController
-            //detail.movie = movie
+            let detail = segue.destination as! DetailViewController
+            detail.setMovie(movie, and: genres)
         default:
             return
         }
@@ -200,7 +217,11 @@ extension RootViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension RootViewController: UITableViewDelegate {
-    
+ 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 // MARK: - Search Results Updating

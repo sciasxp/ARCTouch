@@ -30,7 +30,8 @@ class MovieTableViewCell: UITableViewCell {
 
     func setMovie(_ movie: UpcomingCodable) {
     
-        if let posterPath = movie.posterPath, let url = PosterEndpoint.poster(size: .w500, posterPath: posterPath).request.url {
+        if let posterPath = movie.posterPath,
+            let url = PosterEndpoint.poster(size: .w154, posterPath: posterPath).request.url {
         
         try? self.posterImageView.image = UIImage(data: Data(contentsOf: url))
         }
