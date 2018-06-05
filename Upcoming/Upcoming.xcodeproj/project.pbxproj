@@ -14,6 +14,10 @@
 		BE8F8C0C20C6238500464572 /* TMDbClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F8C0B20C6238500464572 /* TMDbClient.swift */; };
 		BE8F8C0E20C623F500464572 /* TMDbEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F8C0D20C623F500464572 /* TMDbEndpoint.swift */; };
 		BE8F8C1020C6243900464572 /* PosterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F8C0F20C6243900464572 /* PosterEndpoint.swift */; };
+		BE8F8C1720C62A1800464572 /* GenreCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F8C1320C62A1800464572 /* GenreCodable.swift */; };
+		BE8F8C1820C62A1800464572 /* UpcomingCodableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F8C1420C62A1800464572 /* UpcomingCodableList.swift */; };
+		BE8F8C1920C62A1800464572 /* UpcomingCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F8C1520C62A1800464572 /* UpcomingCodable.swift */; };
+		BE8F8C1A20C62A1800464572 /* GenreCodableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F8C1620C62A1800464572 /* GenreCodableList.swift */; };
 		BEBAD17220C5D8FA0032B5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBAD17120C5D8FA0032B5A8 /* AppDelegate.swift */; };
 		BEBAD17420C5D8FA0032B5A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBAD17320C5D8FA0032B5A8 /* ViewController.swift */; };
 		BEBAD17720C5D8FA0032B5A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEBAD17520C5D8FA0032B5A8 /* Main.storyboard */; };
@@ -29,6 +33,10 @@
 		BE8F8C0B20C6238500464572 /* TMDbClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDbClient.swift; sourceTree = "<group>"; };
 		BE8F8C0D20C623F500464572 /* TMDbEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDbEndpoint.swift; sourceTree = "<group>"; };
 		BE8F8C0F20C6243900464572 /* PosterEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterEndpoint.swift; sourceTree = "<group>"; };
+		BE8F8C1320C62A1800464572 /* GenreCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreCodable.swift; sourceTree = "<group>"; };
+		BE8F8C1420C62A1800464572 /* UpcomingCodableList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingCodableList.swift; sourceTree = "<group>"; };
+		BE8F8C1520C62A1800464572 /* UpcomingCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingCodable.swift; sourceTree = "<group>"; };
+		BE8F8C1620C62A1800464572 /* GenreCodableList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreCodableList.swift; sourceTree = "<group>"; };
 		BEBAD16E20C5D8FA0032B5A8 /* Upcoming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Upcoming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBAD17120C5D8FA0032B5A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEBAD17320C5D8FA0032B5A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +109,10 @@
 		BEBAD18320C60FA10032B5A8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BE8F8C1320C62A1800464572 /* GenreCodable.swift */,
+				BE8F8C1620C62A1800464572 /* GenreCodableList.swift */,
+				BE8F8C1520C62A1800464572 /* UpcomingCodable.swift */,
+				BE8F8C1420C62A1800464572 /* UpcomingCodableList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -232,10 +244,14 @@
 				BE8F8C0620C622CF00464572 /* APIClient+Extension.swift in Sources */,
 				BEBAD17220C5D8FA0032B5A8 /* AppDelegate.swift in Sources */,
 				BE8F8C0420C622AD00464572 /* APIClient.swift in Sources */,
+				BE8F8C1720C62A1800464572 /* GenreCodable.swift in Sources */,
 				BE8F8C0A20C6233D00464572 /* Endpoint+Extension.swift in Sources */,
 				BE8F8C0E20C623F500464572 /* TMDbEndpoint.swift in Sources */,
+				BE8F8C1820C62A1800464572 /* UpcomingCodableList.swift in Sources */,
+				BE8F8C1920C62A1800464572 /* UpcomingCodable.swift in Sources */,
 				BE8F8C1020C6243900464572 /* PosterEndpoint.swift in Sources */,
 				BE8F8C0C20C6238500464572 /* TMDbClient.swift in Sources */,
+				BE8F8C1A20C62A1800464572 /* GenreCodableList.swift in Sources */,
 				BE8F8C0820C6232400464572 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
