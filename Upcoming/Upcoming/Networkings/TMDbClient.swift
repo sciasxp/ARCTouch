@@ -10,7 +10,7 @@ import Foundation
 
 class TMDbClient: APIClient {
     
-    static let apiKey = "1f54bd990f1cdfb230adb312546d765d."
+    static let apiKey = "1f54bd990f1cdfb230adb312546d765d"
     
     private lazy var decoder: JSONDecoder = {
         
@@ -23,13 +23,13 @@ class TMDbClient: APIClient {
         return decoder
     }()
     
-    func fetchUpcomings<T: Codable>(with endpoint: TMDbEndpoint, completion: @escaping (Either<T>) -> Void) {
+    func fetchUpcomings(with endpoint: TMDbEndpoint, completion: @escaping (Either<UpcomingCodableList>) -> Void) {
         
         let request = endpoint.request
         get(with: request, decoder: decoder, completion: completion)
     }
     
-    func fetchGenres<T: Codable>(with endpoint: TMDbEndpoint, completion: @escaping (Either<T>) -> Void) {
+    func fetchGenres(with endpoint: TMDbEndpoint, completion: @escaping (Either<GenreCodableList>) -> Void) {
         
         let request = endpoint.request
         get(with: request, decoder: decoder, completion: completion)
