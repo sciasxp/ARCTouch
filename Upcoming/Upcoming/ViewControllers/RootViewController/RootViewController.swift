@@ -47,7 +47,8 @@ class RootViewController: UIViewController {
         SetupSearchController()
         
         // Setup TableView
-        
+        self.loadingLabel.text = UILabel.Loading.message
+        self.greetingsLabel.text = UILabel.Loading.greetings
         
         // Load Data
         loadGenres()
