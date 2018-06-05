@@ -12,7 +12,7 @@ extension UILabel {
     
     enum Loading {
         
-        static let message: String = NSLocalizedString("Loading...", comment: "Loading message")
+        static let message: String = NSLocalizedString("Now Loading...", comment: "Loading message")
         static let greetings: String = NSLocalizedString("Looking for a movie?", comment: "Greetings message while loading data")
     }
     
