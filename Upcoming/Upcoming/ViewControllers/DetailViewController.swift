@@ -18,6 +18,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var imageWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
+    
     static let formatter: DateFormatter = {
         
         let formatter = DateFormatter()
@@ -50,9 +54,22 @@ class DetailViewController: UIViewController {
         
         
         self.titleLabel.text = movie.title
+        self.title = movie.title
         self.releaseDateLabel.text = DetailViewController.formatter.string(from: movie.releaseDate)
         self.overViewLabel.text = movie.overview
         self.genreLabel.text = getGenresNames()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        widthConstraint.constant = UIScreen.main.bounds.size.width
+        if heightConstraint != nil {
+            heightConstraint.constant = UIScreen.main.bounds.size.height - 52
+        }
+        if imageWidthConstraint != nil {
+            imageWidthConstraint.constant = UIScreen.main.bounds.size.width - 55
+        }
     }
 
     override func didReceiveMemoryWarning() {
