@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RootViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class RootViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var greetingsLabel: UILabel!
     @IBOutlet weak var loadingLabel: UILabel!
+    
     private let searchController = UISearchController(searchResultsController: nil)
     
     // MARK: -
@@ -209,7 +211,17 @@ extension RootViewController: UITableViewDataSource {
             movie = movies[indexPath.row]
         }
         
-        cell.setMovie(movie)
+        if let posterPath = movie.posterPath,
+            let url = ImageEndpoint.poster(size: .w154, path: posterPath).request.url {
+            
+            cell.imageView?.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "MoviePlaceholder")) { (image, error, cacheType, url) in
+                
+                cell.loadingActivity.stopAnimating()
+            }
+        }
+        
+        cell.titleLabel.text = movie.title
+        cell.releaseDateLabel.text = MovieTableViewCell.formatter.string(from: movie.releaseDate)
         
         return cell
     }

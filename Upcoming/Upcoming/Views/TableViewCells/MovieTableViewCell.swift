@@ -13,6 +13,7 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
+    @IBOutlet weak var loadingActivity: UIActivityIndicatorView!
     
     static let formatter: DateFormatter = {
         
@@ -24,20 +25,8 @@ class MovieTableViewCell: UITableViewCell {
     }()
     
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         // Initialization code
     }
-
-    func setMovie(_ movie: UpcomingCodable) {
-    
-        if let posterPath = movie.posterPath,
-            let url = PosterEndpoint.poster(size: .w154, posterPath: posterPath).request.url {
-        
-        try? self.posterImageView.image = UIImage(data: Data(contentsOf: url))
-        }
-        
-        self.titleLabel.text = movie.title
-        self.releaseDateLabel.text = MovieTableViewCell.formatter.string(from: movie.releaseDate)
-    }
-
 }

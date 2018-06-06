@@ -15,6 +15,7 @@ struct UpcomingCodable: Codable, Equatable {
     let overview: String
     let releaseDate: Date
     var posterPath: String?
+    var backdropPath: String?
     let genreIds: Set<Int32>?
 }
 

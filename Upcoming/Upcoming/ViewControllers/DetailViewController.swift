@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailViewController: UIViewController {
 
     // MARK: - Properties
     
+    @IBOutlet weak var loadingActivity: UIActivityIndicatorView!
     @IBOutlet weak var overViewLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
@@ -47,11 +49,13 @@ class DetailViewController: UIViewController {
         }
         
         if let posterPath = movie.posterPath,
-            let url = PosterEndpoint.poster(size: .w500, posterPath: posterPath).request.url {
+            let url = ImageEndpoint.poster(size: .w500, path: posterPath).request.url {
             
-            try? self.imageView.image = UIImage(data: Data(contentsOf: url))
+            imageView.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "MoviePlaceholder")) { (image, error, cacheTyper, url) in
+                
+                self.loadingActivity.stopAnimating()
+            }
         }
-        
         
         self.titleLabel.text = movie.title
         self.title = movie.title

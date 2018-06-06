@@ -13,9 +13,9 @@ enum Size: String {
     case w92, w154, w185, w342, w500, w780, original
 }
 
-enum PosterEndpoint: Endpoint {
+enum ImageEndpoint: Endpoint {
     
-    case poster(size: Size, posterPath: String)
+    case poster(size: Size, path: String)
     
     var baseURL: String {
         
@@ -25,8 +25,8 @@ enum PosterEndpoint: Endpoint {
     var path: String {
         
         switch self {
-        case .poster(let size, let posterPath):
-            return "/t/p/\(size.rawValue)\(posterPath)"
+        case .poster(let size, let path):
+            return "/t/p/\(size.rawValue)\(path)"
         }
     }
     
