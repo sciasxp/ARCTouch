@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieTableViewCell: UITableViewCell {
 
@@ -28,5 +29,32 @@ class MovieTableViewCell: UITableViewCell {
         
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setMovie(_ movie: UpcomingCodable) {
+        
+        // Reset content
+        self.imageView?.image = #imageLiteral(resourceName: "MoviePlaceholder")
+        self.titleLabel.text = ""
+        self.releaseDateLabel.text = ""
+        self.loadingActivity.startAnimating()
+        
+        // Get Image
+        if let posterPath = movie.posterPath,
+            let url = ImageEndpoint.poster(size: .w154, path: posterPath).request.url {
+            
+            self.imageView?.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "MoviePlaceholder")) { (image, error, cacheType, url) in
+                
+                self.loadingActivity.stopAnimating()
+            }
+            
+        } else {
+            
+            self.loadingActivity.stopAnimating()
+        }
+        
+        // Set other contents
+        self.titleLabel.text = movie.title
+        self.releaseDateLabel.text = MovieTableViewCell.formatter.string(from: movie.releaseDate)
     }
 }

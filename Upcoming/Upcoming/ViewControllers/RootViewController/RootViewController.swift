@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class RootViewController: UIViewController {
 
@@ -199,7 +198,7 @@ extension RootViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.Identifiers.movie,
                                                  for: indexPath) as! MovieTableViewCell
         
-        // Configure the cell
+        // Getting content
         let movie: UpcomingCodable
         
         if isFiltering() {
@@ -211,6 +210,15 @@ extension RootViewController: UITableViewDataSource {
             movie = movies[indexPath.row]
         }
         
+        cell.setMovie(movie)
+        
+        /*
+        // Reset content
+        cell.imageView?.image = #imageLiteral(resourceName: "MoviePlaceholder")
+        cell.titleLabel.text = ""
+        cell.releaseDateLabel.text = ""
+        
+        // Get Image
         if let posterPath = movie.posterPath,
             let url = ImageEndpoint.poster(size: .w154, path: posterPath).request.url {
             
@@ -218,10 +226,16 @@ extension RootViewController: UITableViewDataSource {
                 
                 cell.loadingActivity.stopAnimating()
             }
+            
+        } else {
+         
+            cell.loadingActivity.stopAnimating()
         }
         
+        // Set other contents
         cell.titleLabel.text = movie.title
         cell.releaseDateLabel.text = MovieTableViewCell.formatter.string(from: movie.releaseDate)
+        */
         
         return cell
     }

@@ -55,6 +55,10 @@ class DetailViewController: UIViewController {
                 
                 self.loadingActivity.stopAnimating()
             }
+            
+        } else {
+            
+            self.loadingActivity.stopAnimating()
         }
         
         self.titleLabel.text = movie.title
