@@ -12,11 +12,11 @@
 
 # Screenshots
 <center>
-  <img src="/Screenshots/screenshot1" alt="Screenshot 1" border="0" style="width: 150px;">
-  <img src="/Screenshots/screenshot2" alt="Screenshot 2" border="0" style="width: 150px;">
-  <img src="/Screenshots/screenshot3" alt="Screenshot 3" border="0" style="width: 300px;">
-  <img src="/Screenshots/screenshot4" alt="Screenshot 4" border="0" style="width: 300px;">
-  <img src="/Screenshots/screenshot5" alt="Screenshot 5" border="0" style="width: 150px;">
+  <img src="/Screenshots/screenshot1.jpg" alt="Screenshot 1" border="0" style="width: 150px;">
+  <img src="/Screenshots/screenshot2.jpg" alt="Screenshot 2" border="0" style="width: 150px;">
+  <img src="/Screenshots/screenshot3.jpg" alt="Screenshot 3" border="0" style="width: 300px;">
+  <img src="/Screenshots/screenshot4.jpg" alt="Screenshot 4" border="0" style="width: 300px;">
+  <img src="/Screenshots/screenshot5.jpg" alt="Screenshot 5" border="0" style="width: 150px;">
 </center>
 
 # Features
