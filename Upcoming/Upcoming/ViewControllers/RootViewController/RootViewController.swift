@@ -212,31 +212,6 @@ extension RootViewController: UITableViewDataSource {
         
         cell.setMovie(movie)
         
-        /*
-        // Reset content
-        cell.imageView?.image = #imageLiteral(resourceName: "MoviePlaceholder")
-        cell.titleLabel.text = ""
-        cell.releaseDateLabel.text = ""
-        
-        // Get Image
-        if let posterPath = movie.posterPath,
-            let url = ImageEndpoint.poster(size: .w154, path: posterPath).request.url {
-            
-            cell.imageView?.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "MoviePlaceholder")) { (image, error, cacheType, url) in
-                
-                cell.loadingActivity.stopAnimating()
-            }
-            
-        } else {
-         
-            cell.loadingActivity.stopAnimating()
-        }
-        
-        // Set other contents
-        cell.titleLabel.text = movie.title
-        cell.releaseDateLabel.text = MovieTableViewCell.formatter.string(from: movie.releaseDate)
-        */
-        
         return cell
     }
 }
