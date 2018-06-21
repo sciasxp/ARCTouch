@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Upcoming
+
+  Created by Luciano Nunes on 05/06/18.
+  Copyright © 2018 ArcTouch. All rights reserved.
+*/
+
+"Now Loading..." = "Now Loading...";
+"Looking for a movie?" = "Looking for a movie?";
+"Upcoming" = "Upcoming";
+"Search for a movie!" = "Search for a movie!";
+"Error" = "Error";
